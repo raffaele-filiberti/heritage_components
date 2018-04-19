@@ -1,0 +1,46 @@
+@import '../../scss/color';
+
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+  color: inherit;
+  font-size: .875rem;
+  padding: .35em .5em;
+
+  &:focus {
+    outline: none;
+  }
+
+  &Primary {
+    composes: btn;
+    color: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background: $primary;
+    }
+  }
+
+  &Success {
+    composes: btn;
+    color: $success;
+    border-color: $success;
+  }
+
+  &Danger {
+    composes: btn;
+    color: $danger;
+    border-color: $danger;
+  }
+
+  &Warning {
+    composes: btn;
+    color: $warning;
+    border-color: $warning;
+  }
+}
