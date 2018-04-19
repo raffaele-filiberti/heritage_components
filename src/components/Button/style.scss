@@ -6,41 +6,34 @@
   vertical-align: middle;
   text-align: center;
   background: transparent;
-  border: 1px solid #000;
+  border: 2px solid #000;
   cursor: pointer;
   color: inherit;
   font-size: .875rem;
   padding: .35em .5em;
+  transition: .25s;
 
   &:focus {
     outline: none;
   }
 
-  &Primary {
-    composes: btn;
-    color: $primary;
-    border-color: $primary;
+  &:disabled {
+    border-color: #DDD;
+    color: #DDD;
+    background: #fafafa;
+    cursor: not-allowed;
+  }
+}
 
-    &:hover {
-      background: $primary;
+@each $label, $color in $colors {
+  .#{$label} {
+    composes: btn;
+    color: $color;
+    border-color: $color;
+
+    &:hover:not(:disabled) {
+      background: $color;
+      color: #fff;
     }
-  }
-
-  &Success {
-    composes: btn;
-    color: $success;
-    border-color: $success;
-  }
-
-  &Danger {
-    composes: btn;
-    color: $danger;
-    border-color: $danger;
-  }
-
-  &Warning {
-    composes: btn;
-    color: $warning;
-    border-color: $warning;
   }
 }

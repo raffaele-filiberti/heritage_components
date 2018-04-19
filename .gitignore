@@ -21,8 +21,13 @@ yarn-debug.log*
 yarn-error.log*
 
 # hidden
-/.idea/workspace.xml
 /src/components/SmoothScrolling
 /src/components/Typography
 /src/components/Burger
 /utils
+
+# IntelliJ project files
+*.iml
+*.iws
+*.ipr
+.idea/
