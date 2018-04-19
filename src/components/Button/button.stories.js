@@ -1,8 +1,12 @@
 import React from 'react';
 
+import md from './button.md';
+
 import {storiesOf} from '@storybook/react';
+
 import {action} from '@storybook/addon-actions';
-import {boolean, text, select, withKnobs} from '@storybook/addon-knobs/react';
+import {boolean, select, text, withKnobs} from '@storybook/addon-knobs/react';
+import { withNotes } from '@storybook/addon-notes';
 
 import Button from './';
 
@@ -27,10 +31,10 @@ storiesOf('Button', module)
             {story()}
         </div>
     ))
-    .add('base', () => (
+    .add('base', withNotes(md)(() => (
             <Button className={select('Class', options, 'btnPrimary')}
                     disabled={boolean('Disabled', false)}
                     onClick={action('clicked')}
                     label={text('Label', 'Hello Button')}/>
         )
-    );
+    ));

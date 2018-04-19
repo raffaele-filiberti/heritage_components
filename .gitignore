@@ -21,7 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # hidden
-/.idea
+/.idea/workspace.xml
 /src/components/SmoothScrolling
 /src/components/Typography
 /src/components/Burger
+/utils
